@@ -25,7 +25,7 @@
 	<Include file="core\core.xml"/>
 	<Include file="resources\resources.xml"/>
 	<Script file="totalRP3.lua"/>
-	<Include file="modules\modules.xml"/>
+	<Include file="modules\Modules.xml"/>
 
 	<Frame parent="UIParent" name="TRP3_EventFrame">
 		<Anchors>

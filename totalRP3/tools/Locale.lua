@@ -1216,6 +1216,10 @@ People will be able to copy and use the content of the link.]],
 	------------------------------------------------------------------------------------------------
 
 	CL_TOOLTIP = "Create a chat link",
+	CO_MODULES_TT_TRP_2 = "This module requires at least Total RP 3 build numbered %s.",
+	CO_MODULES_TT_DEP_2 = "- %s (version required: %s, version installed: %s)",
+	CO_MODULES_TT_DEP_DISABLED = "- %s (disabled)",
+	CO_MODULES_TT_DEP_MISSING = "- %s (missing)",
 };
 
 -- Use Ellyb to generate the Localization system

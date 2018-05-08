@@ -18,35 +18,42 @@
 	See the License for the specific language governing permissions and
 	limitations under the License.
 -->
+
+
+	<Script file="ModuleManager.lua"/>
+	<Script file="Module.lua"/>
+	<Script file="ModulesUI.lua"/>
 	 
 	 <Frame name="TRP3_ConfigurationModuleFrame" virtual="true">
 		<Backdrop edgeFile="Interface\Tooltips\UI-Tooltip-Border" bgFile="Interface\DialogFrame\UI-DialogBox-Background" tile="true">
-			<EdgeSize><AbsValue val="24"/></EdgeSize><TileSize><AbsValue val="200"/></TileSize>
-			<BackgroundInsets><AbsInset left="5" right="5" top="5" bottom="5"/></BackgroundInsets>
+			<EdgeSize val="24" />
+			<TileSize val="200" />
+			<BackgroundInsets left="5" right="5" top="5" bottom="5" />
 		</Backdrop>
 		<Size x="0" y="60"/>
 		<Layers>
 			<Layer level="OVERLAY">
-				<FontString name="$parentModuleName" text="[name]" inherits="GameFontNormal" justifyH="LEFT">
+				<FontString parentKey="Name" text="[name]" inherits="GameFontNormal" justifyH="LEFT">
 					<Anchors>
 						<Anchor point="TOPLEFT" x="35" y="-8"/>
 					</Anchors>
 					<Color r="0.95" g="0.95" b="0.95"/>
 				</FontString>
-				<FontString name="$parentModuleVersion" text="[version]" inherits="GameFontNormalSmall" justifyH="LEFT">
+				<FontString parentKey="ModuleVersion" text="[version]" inherits="GameFontNormalSmall" justifyH="LEFT">
 					<Size x="200" y="10"/>
 					<Anchors>
 						<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentModuleName" x="5" y="-5"/>
 					</Anchors>
 					<Color r="0.95" g="0.75" b="0.1"/>
 				</FontString>
-				<FontString name="$parentModuleID" text="[id]" inherits="GameFontNormalSmall" justifyH="LEFT">
+				<FontString parentKey="ModuleID" text="[id]" inherits="GameFontNormalSmall" justifyH="LEFT">
 					<Anchors>
 						<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentModuleVersion" x="0" y="-3"/>
 					</Anchors>
 					<Color r="0.95" g="0.75" b="0.1"/>
 				</FontString>
-				<FontString name="$parentStatus" text="[status]" inherits="GameFontNormalSmall" justifyH="LEFT">
+				<FontString parentKey="Status
+" text="[status]" inherits="GameFontNormalSmall" justifyH="LEFT">
 					<Anchors>
 						<Anchor point="LEFT" relativePoint="RIGHT" relativeTo="$parentModuleVersion" x="0" y="-3"/>
 					</Anchors>
@@ -54,12 +61,7 @@
 			</Layer>
 		</Layers>
 		<Frames>
-			<Button name="$parentInfo" inherits="TRP3_HelpButton">
-				<Anchors>
-					<Anchor point="TOPLEFT" x="13" y="-7"/>
-				</Anchors>
-			</Button>
-			<Button name="$parentAction">
+			<Button parentKey="ActionButton">
 				<Size x="32" y="32"/>
 				<Anchors>
 					<Anchor point="TOPRIGHT" x="-4" y="-4"/>
